@@ -1,0 +1,7 @@
+resources:
+  - k8s/springboot-deployment.yaml
+  - k8s/springboot-service.yaml
+  - k8s/postgres-deployment.yaml
+  - k8s/postgres-service.yaml
+  - k8s/prometheus-deployment.yaml
+  - k8s/grafana-deployment.yaml
