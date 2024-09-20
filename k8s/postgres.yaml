@@ -15,7 +15,7 @@ spec:
       containers:
         - name: postgres
           image: postgres:latest
-          imagePullPolicy: Never
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432
           env:
@@ -31,3 +31,18 @@ spec:
       volumes:
         - name: postgres-storage
           emptyDir: {} # For persistent storage, use a PersistentVolumeClaim
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+spec:
+  selector:
+    app: postgres
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+

@@ -2,7 +2,7 @@
 echo Starting port forwarding...
 
 :: delete all kubernetes cluster
-kubectl delete all --all
+kubectl delete -k .
 
 :: apply the Kustomization.yaml
 kubectl apply -k .

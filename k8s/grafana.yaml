@@ -17,7 +17,7 @@ spec:
       containers:
         - name: grafana
           image: grafana/grafana:latest
-          imagePullPolicy: Never
+          imagePullPolicy: IfNotPresent  # Pull the image only if not available locally
           ports:
             - containerPort: 3000
           volumeMounts:
@@ -26,7 +26,9 @@ spec:
       volumes:
         - name: grafana-storage
           emptyDir: {}  # Or use PersistentVolumeClaim for persistent storage
+
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
