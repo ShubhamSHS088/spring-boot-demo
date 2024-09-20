@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-demo
-          image: ShubhamSHS088/spring-boot-demo:latest
+          image: shubhamshs088/spring-boot-demo:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
