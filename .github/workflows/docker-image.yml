@@ -18,7 +18,7 @@ jobs:
       - name: Set up JDK 22-oracle
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin's
+          distribution: 'temurin'
           java-version: '21'
 
       # Build the Spring Boot JAR
