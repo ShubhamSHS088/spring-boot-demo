@@ -21,6 +21,10 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
+      # Grant execution permissions to the Maven wrapper
+      - name: Make mvnw executable
+        run: chmod +x ./mvnw
+
       # Build the Spring Boot JAR
       - name: Build Spring Boot Application
         run: ./mvnw clean package
