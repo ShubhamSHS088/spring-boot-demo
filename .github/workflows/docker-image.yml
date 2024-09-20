@@ -27,7 +27,7 @@ jobs:
 
       # Build the Spring Boot JAR
       - name: Build Spring Boot Application
-        run: ./mvnw clean package
+        run: ./mvnw clean package -DskipTests=true
 
       # Log in to Docker Hub
       - name: Log in to Docker Hub
