@@ -14,6 +14,7 @@ public class EmployeeController {
     @Autowired
     EmployeeService service;
 
+    // route to get the lis t of employees
     @GetMapping("/employees")
     public List<Employee> getEmployees() {
         return service.getEmployees();
